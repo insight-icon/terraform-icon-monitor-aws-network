@@ -5,7 +5,11 @@
 
 ## Features
 
-This module...
+This module sets up the network for a monitoring cluster for the ICON blockchain. Sets up the following:
+
+- VPC 
+- Security groups 
+- Route53 hosted zones 
 
 ## Terraform Versions
 
@@ -15,8 +19,7 @@ For Terraform v0.12.0+
 
 ```
 module "this" {
-    source = "github.com/insight-icon/terraform-icon-monitor-aws-network"
-
+  source = "github.com/insight-icon/terraform-icon-monitor-aws-network"
 }
 ```
 ## Examples
