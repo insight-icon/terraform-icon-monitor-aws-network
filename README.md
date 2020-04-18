@@ -9,7 +9,6 @@ This module sets up the network for a monitoring cluster for the ICON blockchain
 
 - VPC 
 - Security groups 
-- Route53 hosted zones 
 
 ## Terraform Versions
 
@@ -17,11 +16,12 @@ For Terraform v0.12.0+
 
 ## Usage
 
-```
+```hcl-terraform
 module "this" {
   source = "github.com/insight-icon/terraform-icon-monitor-aws-network"
 }
 ```
+ 
 ## Examples
 
 - [defaults](https://github.com/insight-icon/terraform-icon-monitor-aws-network/tree/master/examples/defaults)
