@@ -1,3 +1,9 @@
+variable "vpc_type" {
+  description = "The type of vpc"
+  type        = string
+  default     = "monitoring"
+}
+
 ########
 # Label
 ########

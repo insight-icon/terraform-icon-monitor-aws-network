@@ -5,7 +5,7 @@ module "label" {
 
   tags = {
     Terraform = true
-    VpcType   = "monitoring"
+    VpcType   = var.vpc_type
   }
 
   environment = var.environment
