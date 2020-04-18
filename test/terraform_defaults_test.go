@@ -3,9 +3,6 @@ package test
 import (
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
-	"log"
-	"os"
-	"path"
 	"testing"
 )
 

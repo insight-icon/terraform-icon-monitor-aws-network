@@ -31,13 +31,15 @@ resource "aws_security_group" "cachet" {
   //  }
 }
 
-resource "aws_security_group_rule" "ssh" {
+resource "aws_security_group_rule" "cachet_ssh" {
   count             = 1
   from_port         = 22
   to_port           = 22
   protocol          = "tcp"
   security_group_id = join("", aws_security_group.cachet.*.id)
-  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+
+  type = "ingress"
 }
 
 resource "aws_security_group_rule" "http" {
@@ -46,23 +48,27 @@ resource "aws_security_group_rule" "http" {
   to_port           = 80
   protocol          = "tcp"
   security_group_id = join("", aws_security_group.cachet.*.id)
-  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+
+  type = "ingress"
 }
 
-resource "aws_security_group_rule" "https" {
+resource "aws_security_group_rule" "cachet_https" {
   count             = 1
   from_port         = 443
   to_port           = 443
   protocol          = "tcp"
   security_group_id = join("", aws_security_group.cachet.*.id)
+  cidr_blocks       = ["0.0.0.0/0"]
   type              = "ingress"
 }
 
-resource "aws_security_group_rule" "egress" {
+resource "aws_security_group_rule" "cachet_egress" {
   count             = 1
   from_port         = 0
   to_port           = 65535
   protocol          = "tcp"
   security_group_id = join("", aws_security_group.cachet.*.id)
+  cidr_blocks       = ["0.0.0.0/0"]
   type              = "egress"
 }
