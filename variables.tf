@@ -24,9 +24,3 @@ variable "namespace" {
   type        = string
   default     = "prod"
 }
-
-variable "stage" {
-  description = "The stage of the deployment"
-  type        = string
-  default     = "blue"
-}

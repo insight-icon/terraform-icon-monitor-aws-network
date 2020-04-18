@@ -40,7 +40,6 @@ No issue is creating limit on this module.
 | environment | The environment | `string` | `""` | no |
 | name | The name for the label | `string` | `"prep"` | no |
 | namespace | The namespace to deploy into | `string` | `"prod"` | no |
-| stage | The stage of the deployment | `string` | `"blue"` | no |
 | vpc\_type | The type of vpc | `string` | `"monitoring"` | no |
 
 ## Outputs
