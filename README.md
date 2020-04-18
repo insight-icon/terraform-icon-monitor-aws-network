@@ -50,6 +50,7 @@ No issue is creating limit on this module.
 | Name | Description |
 |------|-------------|
 | cachet\_security\_group\_id | n/a |
+| private\_subnets | n/a |
 | public\_subnets | n/a |
 | rds\_security\_group\_id | n/a |
 | vpc\_id | n/a |

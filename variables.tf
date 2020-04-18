@@ -1,8 +1,3 @@
-variable "vpc_type" {
-  description = "The type of vpc"
-  type        = string
-  default     = "monitoring"
-}
 
 ########
 # Label
@@ -23,4 +18,10 @@ variable "namespace" {
   description = "The namespace to deploy into"
   type        = string
   default     = "prod"
+}
+
+variable "vpc_type" {
+  description = "The type of vpc"
+  type        = string
+  default     = "monitoring"
 }
