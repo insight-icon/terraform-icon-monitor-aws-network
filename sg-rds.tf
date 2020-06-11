@@ -2,7 +2,7 @@ resource "aws_security_group" "rds" {
   count = 1
 
   vpc_id = module.vpc.vpc_id
-  name   = var.name
+  name   = "monitoring-rds-${var.name}"
   tags   = var.tags
 }
 

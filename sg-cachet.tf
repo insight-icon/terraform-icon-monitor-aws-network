@@ -3,7 +3,7 @@ resource "aws_security_group" "cachet" {
   count  = 1
   vpc_id = module.vpc.vpc_id
 
-  name = var.name
+  name = "cachet-${var.name}"
   tags = var.tags
 }
 

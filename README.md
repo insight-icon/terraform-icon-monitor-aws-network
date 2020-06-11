@@ -41,7 +41,7 @@ No issue is creating limit on this module.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | id | The id to apply to resources | `string` | `""` | no |
-| name | The name for the label | `string` | `"prep"` | no |
+| name | The name for the label | `string` | `"monitoring"` | no |
 | tags | Tgas to apply to instance | `map(string)` | `{}` | no |
 
 ## Outputs
