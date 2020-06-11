@@ -1,16 +1,3 @@
-module "label" {
-  source = "github.com/robc-io/terraform-null-label.git?ref=0.16.1"
-
-  name = var.name
-
-  tags = {
-    Terraform = true
-    VpcType   = var.vpc_type
-  }
-
-  environment = var.environment
-  namespace   = var.namespace
-}
 
 data "aws_availability_zones" "this" {
   state = "available"
@@ -19,7 +6,7 @@ data "aws_availability_zones" "this" {
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = module.label.id
+  name = var.id
   cidr = "10.0.0.0/16"
 
   azs             = [for r in data.aws_availability_zones.this.names : r]
@@ -29,6 +16,6 @@ module "vpc" {
   enable_nat_gateway = false
   enable_vpn_gateway = false
 
-  tags = module.label.tags
+  tags = var.tags
 }
 

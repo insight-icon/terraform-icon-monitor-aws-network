@@ -8,20 +8,14 @@ variable "name" {
   default     = "prep"
 }
 
-variable "environment" {
-  description = "The environment"
+variable "tags" {
+  description = "Tgas to apply to instance"
+  type        = map(string)
+  default     = {}
+}
+
+variable "id" {
+  description = "The id to apply to resources"
   type        = string
   default     = ""
-}
-
-variable "namespace" {
-  description = "The namespace to deploy into"
-  type        = string
-  default     = "prod"
-}
-
-variable "vpc_type" {
-  description = "The type of vpc"
-  type        = string
-  default     = "monitoring"
 }

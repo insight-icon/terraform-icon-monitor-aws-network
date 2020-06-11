@@ -3,32 +3,8 @@ resource "aws_security_group" "cachet" {
   count  = 1
   vpc_id = module.vpc.vpc_id
 
-  //  dynamic "ingress" {
-  //    for_each = [
-  //      22,   # ssh
-  //      80,
-  //      443,
-  //      //      9100, # node exporter
-  //      //      9115, # blackbox exporter
-  //      //      8080, # cadvisor
-  //    ]
-  //
-  //    content {
-  //      from_port = ingress.value
-  //      to_port   = ingress.value
-  //      protocol  = "tcp"
-  //      cidr_blocks = [
-  //        "0.0.0.0/0"]
-  //    }
-  //  }
-  //
-  //  egress {
-  //    from_port = 0
-  //    to_port   = 0
-  //    protocol  = "-1"
-  //    cidr_blocks = [
-  //      "0.0.0.0/0"]
-  //  }
+  name = var.name
+  tags = var.tags
 }
 
 resource "aws_security_group_rule" "cachet_ssh" {

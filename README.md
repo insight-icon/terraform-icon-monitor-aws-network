@@ -40,10 +40,9 @@ No issue is creating limit on this module.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| environment | The environment | `string` | `""` | no |
+| id | The id to apply to resources | `string` | `""` | no |
 | name | The name for the label | `string` | `"prep"` | no |
-| namespace | The namespace to deploy into | `string` | `"prod"` | no |
-| vpc\_type | The type of vpc | `string` | `"monitoring"` | no |
+| tags | Tgas to apply to instance | `map(string)` | `{}` | no |
 
 ## Outputs
 
