@@ -48,3 +48,15 @@ resource "aws_security_group_rule" "cachet_egress" {
   cidr_blocks       = ["0.0.0.0/0"]
   type              = "egress"
 }
+
+resource "aws_security_group_rule" "public_ports" {
+  count             = length(var.public_ports)
+  from_port         = var.public_ports[count.index]
+  to_port           = var.public_ports[count.index]
+  protocol          = "tcp"
+  security_group_id = join("", aws_security_group.cachet.*.id)
+  cidr_blocks       = ["0.0.0.0/0"]
+  type              = "ingress"
+}
+
+

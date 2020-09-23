@@ -19,3 +19,10 @@ variable "id" {
   type        = string
   default     = ""
 }
+
+variable "public_ports" {
+  description = "List of ports to open publicly"
+  type        = list(string)
+  default     = [3000, 9093, 9091, 9090]
+}
+

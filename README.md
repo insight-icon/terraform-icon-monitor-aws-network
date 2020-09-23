@@ -42,6 +42,7 @@ No issue is creating limit on this module.
 |------|-------------|------|---------|:-----:|
 | id | The id to apply to resources | `string` | `""` | no |
 | name | The name for the label | `string` | `"monitoring"` | no |
+| public\_ports | List of ports to open publicly | `list(string)` | <pre>[<br>  3000,<br>  9093,<br>  9091,<br>  9090<br>]</pre> | no |
 | tags | Tgas to apply to instance | `map(string)` | `{}` | no |
 
 ## Outputs
