@@ -22,7 +22,7 @@ resource "aws_security_group_rule" "rds_cachet_ingress" {
   to_port                  = 5432
   protocol                 = "tcp"
   security_group_id        = join("", aws_security_group.rds.*.id)
-  source_security_group_id = aws_security_group.cachet.*.id
+  source_security_group_id = join("", aws_security_group.cachet.*.id)
   type                     = "ingress"
 }
 
