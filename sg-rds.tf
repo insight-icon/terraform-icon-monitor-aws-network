@@ -16,7 +16,7 @@ resource "aws_security_group_rule" "rds_pg" {
   type              = "ingress"
 }
 
-resource "aws_security_group_rule" "rds_pg" {
+resource "aws_security_group_rule" "rds_cachet_ingress" {
   count                    = 1
   from_port                = 5432
   to_port                  = 5432
